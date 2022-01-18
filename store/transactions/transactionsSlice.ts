@@ -11,7 +11,7 @@ import {
 	Timestamp,
 	onSnapshot,
 } from 'firebase/firestore';
-import { nanoid } from 'nanoid';
+import { nanoid } from 'nanoid/non-secure';
 import { db } from '../../api/firebase-config';
 
 type Transaction = {

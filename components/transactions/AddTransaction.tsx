@@ -62,6 +62,7 @@ const AddTransaction = ({ toggleAddTransaction }) => {
 							onBlur={handleBlur('amount')}
 							onChangeText={handleChange('amount')}
 							style={styles.input}
+							keyboardType="number-pad"
 						/>
 						<Text style={styles.label}>Select transaction type</Text>
 						<RadioForm
@@ -104,7 +105,7 @@ const AddTransaction = ({ toggleAddTransaction }) => {
 							setValue={setValue}
 							onSelectItem={(item) => setFieldValue('categoryId', item.value)}
 							style={styles.input}
-							searchable={true}
+							dropDownDirection="TOP"
 						/>
 						<TouchableWithoutFeedback onPress={() => handleSubmit()}>
 							<View style={styles.button}>
@@ -151,8 +152,8 @@ const styles = StyleSheet.create({
 		marginTop: 20,
 		backgroundColor: '#3b83f7',
 		height: 40,
-		textAlign: 'center',
 		display: 'flex',
+		alignItems: 'center',
 		justifyContent: 'center',
 	},
 	buttonText: {
